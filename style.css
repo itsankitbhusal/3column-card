@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* PRIMARY */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* NEUTRAL */
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* font-family: 'Lexend Deca', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* font-family: 'Big Shoulders Display', cursive; */
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: white;
+}
+p {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+section {
+  background-color: var(--transparent-white);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 70vw;
+}
+.card {
+  padding: 2rem 3rem;
+  height: inherit;
+  height: 60vh;
+  display: grid;
+  place-items: left;
+  align-items: center;
+  justify-content: center;
+  color: var(--transparent-white);
+}
+.card-first {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+.card-second {
+  background-color: var(--dark-cyan);
+}
+.card-third {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 2rem;
+}
+button {
+  background: var(--very-light-gray);
+  border-radius: 60px;
+  padding: 12px 24px 12px 24px;
+  border: none;
+  font-weight: 600;
+  mix-blend-mode: screen;
+}
+
+button:hover {
+  background: #cecece;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 3rem 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-first {
+    border-radius: 10px 10px 0 0;
+  }
+  .card-third {
+    border-radius: 0 0 10px 10px;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+}
